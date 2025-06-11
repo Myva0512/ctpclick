@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Permite deslizar al hacer clic en los links del menú */
+}
+
+/* MENU */
+.contenedor-header {
+    background: #000000; /* Fondo negro */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+    color: #00FFFF; /* Color cian */
+    text-decoration: none;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+    color: #FFFFFF; /* Color blanco */
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: #00FFFF; /* Color cian al pasar el mouse */
+}
+
+/* SECCIONES */
+section {
+    padding: 50px 20px; /* Espaciado en las secciones */
+    max-width: 1100px;
+    margin: auto;
+}
+
+.inicio {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(img/fondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #FFFFFF; /* Texto blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.inicio .contenido-banner {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner h1 {
+    font-size: 42px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.nosotros, .servicio {
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.nosotros h3, .servicio h3, .galeria h3 {
+    color: #FF00FF; /* Color magenta */
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 200px; /* Ancho fijo para las imágenes */
+    height: auto; /* Mantener la proporción */
+    margin: 10px; /* Espacio entre imágenes */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* Aumentar el tamaño de la imagen al pasar el mouse */
+}
+
+footer {
+    background-color: #000000; /* Fondo negro */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .redes a {
+    color: #FFFFFF; /* Color blanco */
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #FFFFFF; /* Borde blanco */
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+footer .redes a:hover {
+    background-color: #00FFFF; /* Color cian al pasar el mouse */
+}
+
+/* FORMULARIO DE CONTACTO */
+#contacto {
+    background-color: #000000; /* Fondo negro */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 50px 20px;
+}
+
+#contacto input, #contacto textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E; /* Fondo de los campos */
+    color: #FFFFFF; /* Texto blanco */
+    font-size: 18px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #00FFFF; /* Color cian */
+    border: none;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #000000; /* Texto negro */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #FFFF00; /* Cambia a amarillo al pasar el mouse */
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas más pequeñas */
+}
+
+.col {
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* SECCIÓN RESPONSIVE */
+@media screen and (max-width: 700px) {
+    .nosotros, .servicio {
+        padding: 20px;
+    }
+
+    .galeria {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .galeria img {
+        width: 100%; /* Imágenes ocupan el 100% del ancho */
+    }
+
+    footer .redes a {
+        margin: 5px; /* Espacio reducido entre iconos */
+    }
+}
